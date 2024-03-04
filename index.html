@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Query String Parser</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      #content {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>URL Query String Parser</h1>
+    </header>
+    <div id="content">
+      <h2>Query String:</h2>
+      <p id="query"></p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var query = window.location.search.substring(1);
+        document.getElementById("query").innerHTML = decodeURIComponent(query);
+      });
+    </script>
+  </body>
+</html>
